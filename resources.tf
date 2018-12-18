@@ -36,7 +36,8 @@ resource "aws_security_group" "http_in_80" {
   ingress = {
 #fol local access
 #    cidr_blocks = ["${aws_vpc.vpc_testing.cidr_block}"]
-#for internet acess    cidr_blocks = ["0.0.0.0/0"]
+#for internet acess    
+    cidr_blocks = ["0.0.0.0/0"]
     from_port = 80
     to_port = 80
     protocol = "tcp"
